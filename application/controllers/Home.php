@@ -15,8 +15,11 @@
         public function index ()
         {
 
+            $data['products'] = $this -> product -> get_all ([], 20);
 
-
+            $this -> load -> view ('meta/meta1.php');
+            $this -> load -> view ('header_nav');
+            $this -> load -> view ('homepage', $data);
         }
 
     }
