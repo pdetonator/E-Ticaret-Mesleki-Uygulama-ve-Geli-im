@@ -8,6 +8,8 @@
 
             parent::__construct ();
 
+            login_redirect();
+
             $this -> load -> model ('Users_model', 'user');
 
             $this -> load -> library ('form_validation');
@@ -24,7 +26,7 @@
 
         }
 
-        public function add_user ()
+        public function user_register ()
         {
 
             if ( $this -> input -> method ()) {
@@ -46,7 +48,7 @@
 
                     if ( $this -> user -> add_user ($user_data)) {
 
-                        $this -> session -> set_flashdata ('sucess', 'Kayıt başarılı, Lütfen giriş yapınız.');
+                        $this -> session -> set_flashdata ('sucess', '<li>Kayıt başarılı, Lütfen giriş yapınız.</li>');
 
                         redirect (base_url('giris-yap'));
 
@@ -59,6 +61,10 @@
                     redirect (base_url ('uye-ol'));
 
                 }
+
+            }else {
+
+                show_404();
 
             }
 

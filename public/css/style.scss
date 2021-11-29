@@ -413,17 +413,12 @@ section#products {
             margin: 20px auto;
             width: 100%;
             max-width: 400px;
-            background: #002556;
             border-radius: 4px;
             &.success {
                 background: #1fd13d;
-                ul {
-                    li {
-                        color: #000;
-                        font-weight: 500;
-                        font-size: 13px;
-                    }
-                }
+            }
+            &.error {
+                background: #002556;
             }
             ul {
                 li {

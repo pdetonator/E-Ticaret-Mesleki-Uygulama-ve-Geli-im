@@ -24,6 +24,16 @@
 
         }
 
+        public function get_user ($where)
+        {
+
+            $user = $this -> db
+                          -> get_where ( $this -> table_name,  $where);
+
+            return $user;
+
+        }
+
     }
 
 ?>

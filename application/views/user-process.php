@@ -15,16 +15,22 @@
                         <?=$this -> session -> flashdata ('sucess');?>
                     </ul>
                 </div>
+                <?php elseif ( $this -> session -> has_userdata ('error')) : ?>
+                <div class="validation__errors error">
+                    <ul>
+                        <?=$this -> session -> flashdata ('error');?>
+                    </ul>
+                </div>
                 <?php endif; ?>
-                    <form action="" method="post">
+                    <form action="<?=base_url('login/user_login')?>" method="post">
                         <div class="input__group">
                             <label for="login-mail">E-Mail</label>
-                            <input type="text" name="" id="login-mail" placeholder="ad.soyad@example.com">
+                            <input type="text" name="user-email" id="login-mail" placeholder="ad.soyad@example.com">
                         </div>
                         <div class="input__group">
-                            <label for="login-password">E-Mail</label>
+                            <label for="login-password">Şifre</label>
                             <div class="show__input">
-                                <input type="text" name="" id="login-password" placeholder="****">
+                                <input type="password" name="user-password" id="login-password" placeholder="****">
                                 <i class="fa fa-eye show-password" aria-hidden="true"></i>
                             </div>
                         </div>
@@ -39,7 +45,7 @@
                         </ul>
                     </div>
                     <?php endif; ?>
-                    <form action="<?=base_url('register/add_user')?>" method="post">
+                    <form action="<?=base_url('register/user_register')?>" method="post">
                         <div class="input__group">
                             <label for="register-name">İsim Soyisim</label>
                             <input type="text" name="user-name" id="register-mail" placeholder="ad soyad">

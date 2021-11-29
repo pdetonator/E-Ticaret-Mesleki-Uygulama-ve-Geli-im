@@ -7,7 +7,7 @@
                 <div class="line-3"></div>
             </div>
             <div class="header__brand">
-                <a href="#">
+                <a href="<?=base_url()?>">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/BEAT_Cycling_logo.png" alt="">
                 </a>
             </div>
@@ -44,7 +44,7 @@
         <div class="navbar__wrapper">
             <div class="close__nav">
                 <div class="login__in">
-                    <a href="#">
+                    <a href="<?=base_url('giris-yap');?>">
                         <i class="fa fa-user"></i>
                         <span>Giriş Yap</span>
                     </a>
