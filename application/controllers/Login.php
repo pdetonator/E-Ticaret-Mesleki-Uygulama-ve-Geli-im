@@ -52,6 +52,8 @@
                             'lastLoginTime' => mdate ('%Y-%m-%d %h:%i %a')
                         ));
 
+                        $this -> session -> set_flashdata ('login', 'Giriş başarılı, alışverişe başlayabilirsiniz.');
+
                         redirect ( base_url());
 
                         
